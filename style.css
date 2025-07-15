@@ -5,69 +5,16 @@ body {
    /* background-color: #0f172a; */
 }
 
+
+
+
+
+/*  */
+
 .navbar {
   border-radius: 10px;
 }
 
-/* 
-.hero {
-  height: 100vh;
- 
-}
-
-.hero h1 {
-  font-size: 3rem;
-}
-
-.hero-img {
-  width: 300px;
-  max-width: 100%;
-  border-radius: 20px;
-  right: 50%;
-}
-
-
-.typing-glow {
-  font-size: 1.5rem;
-  color: #fff;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid red;
-  width: fit-content;
-  animation: blink-caret 0.75s step-end infinite;
-  text-shadow: 0 0 10px red, 0 0 20px red;
-}
-
-@keyframes blink-caret {
-  0%, 100% { border-color: transparent; }
-  50% { border-color: red; }
-}
-
-
-
-.social-icons {
-  position:absolute;
-  bottom: 80px;
-  left: 40px;
-  display: flex;
-  flex-direction:row;
-  gap: 20px;
-  z-index: 9999;
-}
-
-.social-icons a {
-  font-size: 20px;
-  color: white;
-  background: #212529;
-  padding: 10px;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-}
-
-.social-icons a:hover {
-  background: #dc3545;
-  color: #fff;
-} */
 
 body {
   background-color: #0f172a;
