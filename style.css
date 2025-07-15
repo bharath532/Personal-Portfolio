@@ -279,3 +279,22 @@ html {
 .email:hover{
   color: blue;
 }
+
+
+
+/* project */
+
+
+  @media (max-width: 767px) {
+    /* Hide all cards except the first one in each carousel-item */
+    .carousel-item .col-sm-6:nth-child(n+2) {
+      display: none;
+    }
+
+    /* Make first card full width */
+    .carousel-item .col-sm-6:first-child {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+
