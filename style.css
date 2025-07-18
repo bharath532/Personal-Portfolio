@@ -1,8 +1,9 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: url(./assets/4702747.jpg);
-   /* background-color: #0f172a; */
+  /* background: url(./assets/4702747.jpg); */
+   background: linear-gradient(80deg, rgb(97, 96, 96), rgb(228, 240, 239));
+  color: #fff;
 }
 
 
@@ -15,11 +16,6 @@ body {
   border-radius: 10px;
 }
 
-
-body {
-  background-color: #0f172a;
-  color: #fff;
-}
 
 .hero {
   min-height: 100vh;
@@ -37,8 +33,11 @@ body {
 
 .hero-img {
   width: 250px;
-  max-width: 100%;
+  height: 250px;
+  /* max-width: 100%; */
+   object-fit: cover;
   border-radius: 20px;
+  right: 20px;
   /* box-shadow: 0 0 20px rgba(255, 0, 0, 0.4); */
 }
 
@@ -50,7 +49,7 @@ body {
   border-right: 2px solid red;
   width: fit-content;
   animation: blink-caret 0.75s step-end infinite;
-  text-shadow: 0 0 10px red, 0 0 20px red;
+  /* text-shadow: 0 0 10px red, 0 0 20px red; */
 }
 
 @keyframes blink-caret {
