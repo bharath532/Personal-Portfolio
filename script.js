@@ -66,6 +66,90 @@
 
 
 
+// ===== Section Scroll (Arrow Down + Swipe) =====
+
+const sections = Array.from(document.querySelectorAll("section, #projects"));
+let currentIndex = 0;
+
+// Find current section based on scroll position
+function updateCurrentIndex() {
+  let scrollPos = window.scrollY + window.innerHeight / 2;
+
+  sections.forEach((sec, i) => {
+    const top = sec.offsetTop;
+    const height = sec.offsetHeight;
+
+    if (scrollPos >= top && scrollPos < top + height) {
+      currentIndex = i;
+    }
+  });
+}
+
+function scrollToSection(index) {
+  if (index >= 0 && index < sections.length) {
+    sections[index].scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+// Prevent too fast scrolling
+let isScrolling = false;
+
+function nextSection() {
+  if (isScrolling) return;
+  isScrolling = true;
+
+  updateCurrentIndex();
+  scrollToSection(currentIndex + 1);
+
+  setTimeout(() => (isScrolling = false), 800);
+}
+
+function prevSection() {
+  if (isScrolling) return;
+  isScrolling = true;
+
+  updateCurrentIndex();
+  scrollToSection(currentIndex - 1);
+
+  setTimeout(() => (isScrolling = false), 800);
+}
+
+// Keyboard Controls
+window.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowDown" || e.key === "PageDown") {
+    e.preventDefault();
+    nextSection();
+  }
+
+  if (e.key === "ArrowUp" || e.key === "PageUp") {
+    e.preventDefault();
+    prevSection();
+  }
+});
+
+// Mobile Swipe Controls
+let touchStartY = 0;
+let touchEndY = 0;
+
+window.addEventListener("touchstart", (e) => {
+  touchStartY = e.changedTouches[0].screenY;
+});
+
+window.addEventListener("touchend", (e) => {
+  touchEndY = e.changedTouches[0].screenY;
+
+  let diff = touchStartY - touchEndY;
+
+  // Swipe up → go next section
+  if (diff > 50) {
+    nextSection();
+  }
+
+  // Swipe down → go previous section
+  if (diff < -50) {
+    prevSection();
+  }
+});
 
 
   // 
