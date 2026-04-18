@@ -247,3 +247,28 @@ html {
     }
   }
 
+.skills-v2{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 60px 0;
+}
+
+.skill-box{
+  background: #334155;
+  border-radius: 15px;
+  padding: 20px;
+  transition: 0.3s;
+  height: 100%;
+}
+
+.skill-box img{
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.skill-box:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+  background: #1f2937;
+}
