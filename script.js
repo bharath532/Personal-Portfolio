@@ -58,6 +58,7 @@
       .catch((err) => {
         console.error("Submission error:", err);
         alert("Submission failed. Check console for details.");
+        
       });
     });
   });
